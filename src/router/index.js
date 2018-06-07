@@ -4,7 +4,8 @@ import Router from 'vue-router'
 import Login from '../views/Login'
 import cons from '../views/cons'
 import test from '../views/test'
-Vue.use(Router)
+import map from '../views/map'
+Vue.use(Router);
 
 export default new Router({
   routes: [
@@ -22,6 +23,11 @@ export default new Router({
       path: '/test',
       name: 'test',
       component: test
+    },
+    {
+      path: '/map',
+      name: 'map',
+      component: map
     },
   ]
 })

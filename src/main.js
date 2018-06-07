@@ -6,9 +6,18 @@ import router from './router'
 import './assets/style/market.scss'
 import Mint from 'mint-ui'
 import 'mint-ui/lib/style.css'
-Vue.use(Mint)
+import VueAMap from 'vue-amap';
+Vue.use(Mint);
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
+
+Vue.use(VueAMap);
+VueAMap.initAMapApiLoader({
+  key: 'your amap key',
+  plugin: ['AMap.Autocomplete', 'AMap.PlaceSearch', 'AMap.Scale', 'AMap.OverView', 'AMap.ToolBar', 'AMap.MapType', 'AMap.PolyEditor', 'AMap.CircleEditor'],
+  // 默认高德 sdk 版本为 1.4.4
+  v: '1.4.4'
+});
 
 /* eslint-disable no-new */
 new Vue({
